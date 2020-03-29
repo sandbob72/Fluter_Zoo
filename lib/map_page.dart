@@ -29,12 +29,18 @@ class _MapState extends State<Map> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Maps Sample App'),
-          backgroundColor: Colors.green[700],
-            leading: IconButton(
-              icon: Icon(Icons.arrow_back, color: Colors.black),
-              onPressed: () => Navigator.of(context).pop(),
-            )
+          backgroundColor: Colors.lightBlue,
+          leading: IconButton(
+            icon: Icon(Icons.navigate_before,
+              color: Colors.white,
+              size: 35,),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
+          title: Text(
+            "แผนที่สวนสัตว์ PK Zoo",
+            style: TextStyle(fontFamily: "Sriracha", fontSize: 30),
+          ),
+          centerTitle: true,
         ),
         body: GoogleMap(
           onMapCreated: _onMapCreated,

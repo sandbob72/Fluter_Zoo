@@ -23,7 +23,7 @@ class AnimalPageState extends State<AnimalPage> {
         children: <Widget>[
           Expanded(
             child: Container(
-                color: Colors.red[200],
+//                color: Colors.red[200],
                 margin: EdgeInsets.only(top: 25),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
@@ -58,9 +58,22 @@ class AnimalPageState extends State<AnimalPage> {
                         child: Container(
                           child: Column(
                             children: <Widget>[
-                              Image.asset('assets/images/Hornbill.jpg'),
                               Container(
-                                margin: EdgeInsets.only(top: 10),
+                                margin: EdgeInsets.all(0),
+                                decoration: BoxDecoration(
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.white,
+                                      spreadRadius: 10,
+                                      blurRadius: 1,
+                                      offset: Offset(0, 1), // changes position of shadow
+                                    ),
+                                  ],
+                                ),
+                                child:  Image.asset('assets/images/Poultry1.jpg'),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 20),
                                 height: 70.0,
                                 child: GestureDetector(
                                   onTap: () {
@@ -75,7 +88,7 @@ class AnimalPageState extends State<AnimalPage> {
                                       border: Border.all(
                                         color: Colors.white,
                                         style: BorderStyle.solid,
-                                        width: 2.0,
+                                        width: 5.0,
                                       ),
                                       color: Colors.transparent,
                                       borderRadius: BorderRadius.circular(30.0),
@@ -118,9 +131,22 @@ class AnimalPageState extends State<AnimalPage> {
                         child: Container(
                           child: Column(
                             children: <Widget>[
-                              Image.asset('assets/images/Hornbill.jpg'),
                               Container(
-                                margin: EdgeInsets.only(top: 10),
+                                margin: EdgeInsets.all(0),
+                                decoration: BoxDecoration(
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.white,
+                                      spreadRadius: 10,
+                                      blurRadius: 1,
+                                      offset: Offset(0, 1), // changes position of shadow
+                                    ),
+                                  ],
+                                ),
+                                child:  Image.asset('assets/images/aqua1.jpg'),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 20),
                                 height: 70.0,
                                 child: GestureDetector(
                                   onTap: () {
@@ -135,7 +161,80 @@ class AnimalPageState extends State<AnimalPage> {
                                       border: Border.all(
                                         color: Colors.white,
                                         style: BorderStyle.solid,
-                                        width: 2.0,
+                                        width: 5.0,
+                                      ),
+                                      color: Colors.transparent,
+                                      borderRadius: BorderRadius.circular(30.0),
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Center(
+                                          child: Text(
+                                            "สัตว์น้ำ",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontFamily: 'Sriracha',
+                                              fontSize: 36,
+                                              fontWeight: FontWeight.w600,
+                                              letterSpacing: 1,
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        )),
+                  ),
+                  Container(
+                    child: FlatButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PoultryList()),
+                          );
+                        },
+                        padding: EdgeInsets.all(40.0),
+                        child: Container(
+                          child: Column(
+                            children: <Widget>[
+                              Container(
+                                margin: EdgeInsets.all(0),
+                                decoration: BoxDecoration(
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.white,
+                                      spreadRadius: 10,
+                                      blurRadius: 1,
+                                      offset: Offset(0, 1), // changes position of shadow
+                                    ),
+                                  ],
+                                ),
+                                child:  Image.asset('assets/images/Reptile1.jpg'),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 20),
+                                height: 70.0,
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => PoultryList()),
+                                    );
+                                  },
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        color: Colors.white,
+                                        style: BorderStyle.solid,
+                                        width: 5.0,
                                       ),
                                       color: Colors.transparent,
                                       borderRadius: BorderRadius.circular(30.0),
@@ -146,7 +245,80 @@ class AnimalPageState extends State<AnimalPage> {
                                       children: <Widget>[
                                         Center(
                                           child: Text(
-                                            "สัตว์ปีก",
+                                            "สัตว์เลื้อยคลาน",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontFamily: 'Sriracha',
+                                              fontSize: 36,
+                                              fontWeight: FontWeight.w600,
+                                              letterSpacing: 1,
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        )),
+                  ),
+                  Container(
+                    child: FlatButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PoultryList()),
+                          );
+                        },
+                        padding: EdgeInsets.all(40.0),
+                        child: Container(
+                          child: Column(
+                            children: <Widget>[
+                              Container(
+                                margin: EdgeInsets.all(0),
+                                decoration: BoxDecoration(
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.white,
+                                      spreadRadius: 10,
+                                      blurRadius: 1,
+                                      offset: Offset(0, 1), // changes position of shadow
+                                    ),
+                                  ],
+                                ),
+                                child:  Image.asset('assets/images/mammal1.jpg'),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 20),
+                                height: 70.0,
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => PoultryList()),
+                                    );
+                                  },
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        color: Colors.white,
+                                        style: BorderStyle.solid,
+                                        width: 5.0,
+                                      ),
+                                      color: Colors.transparent,
+                                      borderRadius: BorderRadius.circular(30.0),
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Center(
+                                          child: Text(
+                                            "สัตว์เลี้ยงลูกด้วยน้ำ",
                                             style: TextStyle(
                                               color: Colors.white,
                                               fontFamily: 'Sriracha',
